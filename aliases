@@ -1,0 +1,35 @@
+#!/usr/bin/env zsh
+
+# Always use a colored output for 'ls' command
+alias ls="command ls -1FG"
+
+# List all files in a colorized long format
+alias ll="command ls -lhFG"
+
+# List all files, including hidden files, in a colorized long format
+alias la="command ls -lhAFG"
+
+# List only directories in a colorized format
+alias lsd="command ls -1dG */"
+
+# List only directories in a colorized long format
+alias lld="command ls -lhdG */"
+
+# List only directories, including hidden directories, in a colorized long format
+alias lad="command ls -lhdG .*/ */"
+
+# Print each 'PATH' entry on a separate line
+alias path="echo $PATH | tr ':' '\n'"
+
+# Update all CLI and GUI applications
+alias update="brew update; brew upgrade; brew cleanup; pip3 install --upgrade pip"
+
+# Show/Hide all desktop icons
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+
+# Flush DNS cache
+alias flushdns="sudo killall -HUP mDNSResponder; sleep 1"
+
+# Restart WiFi
+alias wifi="sudo ifconfig en0 down && sudo ifconfig en0 up"
