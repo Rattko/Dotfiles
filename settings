@@ -1,0 +1,25 @@
+#!/usr/bin/env zsh
+
+# Change directories even without the 'cd' command
+setopt AUTO_CD
+
+# Enable case-insensitive globbing
+setopt NO_CASE_GLOB
+
+# Enable expansions in a prompt
+setopt PROMPT_SUBST
+
+# Share only one '.zsh_history' file
+setopt SHARE_HISTORY
+
+# Remove blank lines from the '.zsh_history' file
+setopt HIST_REDUCE_BLANKS
+
+# Ignore duplicates in the '.zsh_history' file
+setopt HIST_IGNORE_ALL_DUPS
+
+# Don't store commands prefixed with a space into the '.zsh_history' file
+setopt HIST_IGNORE_SPACE
+
+# Verify a command when '!!' is executed
+setopt HIST_VERIFY
