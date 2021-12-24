@@ -1,3 +1,3 @@
 #!/usr/bin/env zsh
 
-[[ -f "~/.zsh/.zshrc" ]] && source "~/.zsh/.zshrc"
+[[ -e "$HOME/.zsh/.zshrc" ]] && source "$HOME/.zsh/.zshrc"
