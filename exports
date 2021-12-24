@@ -1,0 +1,20 @@
+#!/usr/bin/env zsh
+
+# Set the default editor to Vim
+export EDITOR='vim'
+export VISUAL='vim'
+
+# Set the location for the '.zsh_history' file
+export HISTFILE="$ZDOTDIR/.zsh_history"
+
+# Set the size of the '.zsh_history' file
+export SAVEHIST='5000'
+
+# Set the size of a session history buffer
+export HISTSIZE='2500'
+
+# Set the default behaviour for the 'grep' command
+export GREP_OPTIONS='--color=auto'
+
+# Prevent Python from creating '__pycache__' folders
+export PYTHONDONTWRITEBYTECODE=1
