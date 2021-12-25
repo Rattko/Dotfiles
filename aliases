@@ -18,9 +18,6 @@ alias lld="command ls -lhdG */"
 # List only directories, including hidden directories, in a colorized long format
 alias lad="command ls -lhdG .*/ */"
 
-# Print each 'PATH' entry on a separate line
-alias path="echo $PATH | tr ':' '\n'"
-
 # Update all CLI and GUI applications
 alias update="brew update; brew upgrade; brew cleanup; pip3 install --upgrade pip"
 

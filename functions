@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+
+# Print each 'PATH' entry on a separate line
+function path {
+    echo $PATH | tr ':' '\n'
+}
+
+# Create '.venv' if not present and source it
+function venv {
+    if [[ ! -d .venv ]]; then
+        python3 -m venv .venv
+    fi
+
+    source .venv/bin/activate
+}
