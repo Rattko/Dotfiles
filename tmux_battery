@@ -1,0 +1,23 @@
+#!/usr/bin/env zsh
+
+power_source=$(pmset -g batt | head -n 1 | cut -d ' ' -f 4-5)
+percentage=$(pmset -g batt | tail -n 1 | sed 's/ /\t/g; s/;//g' | cut -f 4)
+
+if [[ $power_source == "'Battery Power'" ]]; then
+    case $percentage in
+        8[0-9]% | 9[0-9]% | 100%)
+            echo "#[fg=brightgreen]$percentage#[fg=default]"
+        ;;
+        5[0-9]% | 6[0-9]% | 7[0-9]%)
+            echo "#[fg=brightyellow]$percentage#[fg=default]"
+        ;;
+        2[0-9]% | 3[0-9]% | 4[0-9]%)
+            echo "#[fg=orange]$percentage#[fg=default]"
+        ;;
+        *)
+            echo "#[fg=brightred]$percentage#[fg=default]"
+        ;;
+    esac
+else
+    echo "#[fg=brightgreen]$percentage#[fg=default]"
+fi
