@@ -1,0 +1,7 @@
+# Personal preferences
+.venv/
+
+# macOS specific files
+.Spotlight-V100
+.DS_Store
+.Trashes
