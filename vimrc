@@ -12,15 +12,28 @@ set cursorline
 " Show a vertical ruler
 set colorcolumn=100
 
+
+"
+" Behaviour
+"
+
+" Bring backspace back to life
+set backspace=indent,eol,start
+
+" Enable persistent undo
+set undofile
+
+
 "
 " Miscellaneous
 "
 
-" Move `.viminfo` to `.vim` directory
+" Move `.viminfo` to `~/.vim` directory
 set viminfo+=n~/.vim/.viminfo
 
-" Bring backspace back to life
-set backspace=indent,eol,start
+" Store undo files in `~/.vim` directory
+set undodir=~/.vim/.undo//
+
 
 "
 " Key Bindings
@@ -34,9 +47,10 @@ let mapleader = " "
 nnoremap <leader><tab> :bnext<cr>
 nnoremap <leader><s-tab> :bprevious<cr>
 
-" Quickly edit or source `.vimrc`
+" Quickly edit or source `~/.vimrc`
 nnoremap gev :edit $MYVIMRC<cr>
 nnoremap gsv :source $MYVIMRC<cr>
+
 
 "
 " Plugins & Plugin Settings
