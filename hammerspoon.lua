@@ -23,3 +23,29 @@ hs.hotkey.bind({'cmd', 'alt'}, 'f', function()
 
     window:setFrame(windowFrame)
 end)
+
+-- TODO
+hs.hotkey.bind({'ctrl'}, '-', function()
+    local name = 'Mail'
+    local app = hs.application.get(name)
+
+    if app then
+        if not app:mainWindow() then
+            app:selectMenuItem({"kitty", "New OS window"})
+        elseif app:isFrontmost() then
+            app:hide()
+        else
+            app:activate()
+        end
+    else
+        watcher = hs.application.watcher.new(function(name, event, app)
+            if event == hs.application.watcher.launched then
+                app:mainWindow():setFullScreen(true)
+            end
+        end)
+
+        watcher:start()
+
+        hs.application.open(name)
+    end
+end)

@@ -13,12 +13,22 @@ set cursorline
 set colorcolumn=100
 
 "
+" Miscellaneous
+"
+
+" Move `.viminfo` to `.vim` directory
+set viminfo+=n~/.vim/.viminfo
+
+" Bring backspace back to life
+set backspace=indent,eol,start
+
+"
 " Key Bindings
 "
 
 " Quickly edit or source `.vimrc`
-nnoremap gev :edit $MYVIMRC<CR>
-nnoremap gsv :source $MYVIMRC<CR>
+nnoremap gev :edit $MYVIMRC<cr>
+nnoremap gsv :source $MYVIMRC<cr>
 
 "
 " Plugins & Plugin Settings
