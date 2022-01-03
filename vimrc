@@ -12,6 +12,9 @@ set cursorline
 " Show a vertical ruler
 set colorcolumn=100
 
+" Disable a line wrapping
+set nowrap
+
 
 "
 " Behaviour
