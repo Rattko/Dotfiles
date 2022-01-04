@@ -38,6 +38,9 @@ set backspace=indent,eol,start
 " Enable persistent undo
 set undofile
 
+" Remember the last position in a file
+autocmd BufRead * if line("'\"") > 0 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
+
 
 "
 " Miscellaneous
