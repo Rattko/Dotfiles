@@ -12,6 +12,18 @@ set cursorline
 " Show a vertical ruler
 set colorcolumn=100
 
+" Set a width of 1 tab to 4 spaces
+set tabstop=4
+
+" Make `<<`, `>>` and `==` use 4 spaces
+set shiftwidth=4
+
+" Round indent to a multiple of `shiftwidth`
+set shiftround
+
+" Replace tabs with spaces
+set expandtab
+
 " Disable a line wrapping
 set nowrap
 
