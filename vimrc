@@ -52,6 +52,9 @@ set viminfo+=n~/.vim/.viminfo
 " Store undo files in `~/.vim` directory
 set undodir=~/.vim/.undo//
 
+" Store swap files in `~/.vim` directory
+set directory=~/.vim/.swap//
+
 
 "
 " Key Bindings
