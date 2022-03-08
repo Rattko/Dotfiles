@@ -9,8 +9,11 @@ done
 bindkey -v
 bindkey '^?' backward-delete-char
 
-# Enable Starship prompt
+# Enable Starship
 eval "$(starship init zsh)"
+
+# Enable fzf
+[[ -e ~/.zsh/.fzf.zsh ]] && source ~/.zsh/.fzf.zsh
 
 # Use already typed text as a start-point for searching
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
