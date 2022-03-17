@@ -1,3 +1,7 @@
+" No backwards compatibility with Vi
+set nocompatible
+
+
 "
 " Visuals
 "
