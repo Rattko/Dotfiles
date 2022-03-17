@@ -28,6 +28,9 @@ set shiftround
 " Replace tabs with spaces
 set expandtab
 
+" Delete 1 tab worth of spaces when at the beginning of a line
+set smarttab
+
 " Disable a line wrapping
 set nowrap
 
