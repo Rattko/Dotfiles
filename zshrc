@@ -31,3 +31,7 @@ autoload -Uz compinit && compinit
 
 # Enable fish-like autosuggestions
 source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
+# Bind Ctrl-J to accept and Ctrl-K to execute a suggestion
+bindkey '^j' autosuggest-accept
+bindkey '^k' autosuggest-execute
