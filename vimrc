@@ -34,6 +34,12 @@ set smarttab
 " Disable a line wrapping
 set nowrap
 
+" Highlight search results
+set hlsearch
+
+" Highlight search results incrementally
+set incsearch
+
 
 "
 " Behaviour
