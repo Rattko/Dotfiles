@@ -53,6 +53,15 @@ set listchars=tab:>·,trail:~,precedes:<,extends:>
 " Behaviour
 "
 
+" Display partially typed commands at the bottom of the screen
+set showcmd
+
+" Do not display the mode at the bottom of the screen
+set noshowmode
+
+" Enable an enhanced command-line completion
+set wildmenu
+
 " Bring backspace back to life
 set backspace=indent,eol,start
 
