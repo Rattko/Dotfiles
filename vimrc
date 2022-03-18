@@ -65,6 +65,9 @@ set wildmenu
 " Bring backspace back to life
 set backspace=indent,eol,start
 
+" Switch buffers without having to save the current file
+set hidden
+
 " Enable persistent undo
 set undofile
 
