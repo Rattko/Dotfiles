@@ -40,6 +40,10 @@ set hlsearch
 " Highlight search results incrementally
 set incsearch
 
+" Enable smart case-insensitive searching
+set ignorecase
+set smartcase
+
 
 "
 " Behaviour
