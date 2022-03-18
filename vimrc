@@ -44,6 +44,10 @@ set incsearch
 set ignorecase
 set smartcase
 
+" Display certain types of whitespace characters
+set list
+set listchars=tab:>·,trail:~,precedes:<,extends:>
+
 
 "
 " Behaviour
