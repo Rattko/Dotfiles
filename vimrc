@@ -94,7 +94,7 @@ set directory=~/.vim/.swap//
 "
 
 " Set the leader key to space
-nnoremap <space> <nop>
+noremap <space> <nop>
 let mapleader = " "
 
 " Conveniently switch between buffers
@@ -102,8 +102,8 @@ nnoremap <leader><tab> :bnext<cr>
 nnoremap <leader><s-tab> :bprevious<cr>
 
 " Quickly edit or source `~/.vimrc`
-nnoremap gev :edit $MYVIMRC<cr>
-nnoremap gsv :source $MYVIMRC<cr>
+nnoremap <leader>ev :tabedit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 
 "
