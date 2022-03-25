@@ -71,8 +71,12 @@ set hidden
 " Enable persistent undo
 set undofile
 
-" Remember the last position in a file
-autocmd BufRead * if line("'\"") > 0 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
+" Remember the last position in a buffer
+augroup behaviour
+    autocmd!
+    autocmd BufWinEnter *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") | execute "normal! g`\"zz" | endif
+augroup end
 
 
 "
