@@ -101,13 +101,22 @@ set directory=~/.vim/.swap//
 noremap <space> <nop>
 let mapleader = " "
 
+" Quickly edit or source `~/.vimrc`
+nnoremap <leader>ev :tabedit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
 " Conveniently switch between buffers
 nnoremap <leader><tab> :bnext<cr>
 nnoremap <leader><s-tab> :bprevious<cr>
 
-" Quickly edit or source `~/.vimrc`
-nnoremap <leader>ev :tabedit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
+" Add key bindings to easily [build and] execute code in the current buffer
+augroup bindigs
+    autocmd!
+    autocmd FileType c nnoremap <buffer> <leader><cr>
+        \ :update <bar> terminal ++shell ++rows=5 gcc %:p -o %:p:r && %:p:r<cr>
+    autocmd FileType python nnoremap <buffer> <leader><cr>
+        \ :update <bar> terminal ++shell ++rows=5 python3 %:p<cr>
+augroup end
 
 
 "
