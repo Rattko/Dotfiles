@@ -126,14 +126,20 @@ augroup end
 call plug#begin('~/.vim/plugged')
 
 Plug 'gruvbox-community/gruvbox'
+Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
+Plug 'lervag/vimtex', {'for': 'tex'}
+Plug 'tabnine/YouCompleteMe', {'do': './install.py --clang-completer'}
 Plug 'vim-airline/vim-airline'
-Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer'}
 
 call plug#end()
 
 colorscheme gruvbox
 set background=dark
 set termguicolors
+
+nnoremap <c-p> :FZF<cr>
+
+let g:tex_flavor = 'latex'
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
