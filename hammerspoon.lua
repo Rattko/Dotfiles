@@ -14,3 +14,14 @@ end)
 hs.hotkey.bind({'cmd', 'alt'}, 'f', function()
     hs.window.focusedWindow():maximize()
 end)
+
+-- Bring up Kitty
+hs.hotkey.bind({'ctrl'}, ';', function()
+    local app = hs.application.get('kitty')
+
+    if app and app:isFrontmost() then
+        app:hide()
+    else
+        hs.application.launchOrFocus('kitty')
+    end
+end)
