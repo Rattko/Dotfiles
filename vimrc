@@ -53,6 +53,9 @@ set listchars=tab:>·,trail:~,precedes:<,extends:>
 " Behaviour
 "
 
+" Keep a minimum of 20 lines above or below a cursor
+set scrolloff=20
+
 " Display partially typed commands at the bottom of the screen
 set showcmd
 
@@ -105,11 +108,14 @@ let mapleader = " "
 nnoremap <leader>ev :tabedit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" More convenient escape alternative
+inoremap jk <esc>
+
 " Conveniently switch between buffers
 nnoremap <leader><tab> :bnext<cr>
 nnoremap <leader><s-tab> :bprevious<cr>
 
-" Add key bindings to easily [build and] execute code in the current buffer
+" Easily [build and] execute code in the current buffer
 augroup bindigs
     autocmd!
     autocmd FileType c nnoremap <buffer> <leader><cr>
