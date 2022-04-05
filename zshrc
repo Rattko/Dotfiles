@@ -7,6 +7,7 @@ done
 
 # Enable Vim mode
 bindkey -v
+bindkey 'jk' vi-cmd-mode
 bindkey '^?' backward-delete-char
 
 # Enable Starship
