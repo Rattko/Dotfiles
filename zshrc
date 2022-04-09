@@ -17,7 +17,23 @@ eval "$(starship init zsh)"
 [[ -e ~/.zsh/.fzf.zsh ]] && source ~/.zsh/.fzf.zsh
 
 # Use fd instead of find in fzf
-export FZF_DEFAULT_COMMAND='fd'
+export FZF_DEFAULT_COMMAND='fd --type f'
+
+# Set default options for fzf
+export FZF_DEFAULT_OPTS='--height 50% --reverse --border --multi'
+
+# Use ';;' as a trigger sequence instead of '**'
+export FZF_COMPLETION_TRIGGER=';;'
+
+# Use fd instead of find in fzf's fuzzy completion
+_fzf_compgen_path() {
+    fd --type f "$1"
+}
+
+# Use fd instead of find in fzf's directory completion
+_fzf_compgen_dir() {
+    fd --type d "$1"
+}
 
 # Use already typed text as a start-point for searching
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
