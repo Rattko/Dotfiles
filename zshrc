@@ -17,7 +17,7 @@ eval "$(starship init zsh)"
 [[ -e ~/.zsh/.fzf.zsh ]] && source ~/.zsh/.fzf.zsh
 
 # Use fd instead of find in fzf
-export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_COMMAND='fd --type f .'
 
 # Set default options for fzf
 export FZF_DEFAULT_OPTS='--height 50% --reverse --border --multi'
@@ -27,12 +27,12 @@ export FZF_COMPLETION_TRIGGER=';;'
 
 # Use fd instead of find in fzf's fuzzy completion
 _fzf_compgen_path() {
-    fd --type f "$1"
+    fd --type f . "$1"
 }
 
 # Use fd instead of find in fzf's directory completion
 _fzf_compgen_dir() {
-    fd --type d "$1"
+    fd --type d . "$1"
 }
 
 # Use already typed text as a start-point for searching
@@ -55,3 +55,6 @@ source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 # Bind Ctrl-J to accept and Ctrl-K to execute a suggestion
 bindkey '^j' autosuggest-accept
 bindkey '^k' autosuggest-execute
+
+# Enable fish-like syntax highlighting
+source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
