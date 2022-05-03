@@ -100,9 +100,10 @@ set directory=~/.vim/.swap//
 " Key Bindings
 "
 
-" Set the leader key to space
+" Set the leader and localleader key to space
 noremap <space> <nop>
-let mapleader = " "
+let mapleader = ' '
+let maplocalleader = ' '
 
 " Quickly edit or source `~/.vimrc`
 nnoremap <leader>ev :tabedit $MYVIMRC<cr>
@@ -116,12 +117,12 @@ nnoremap <leader><tab> :bnext<cr>
 nnoremap <leader><s-tab> :bprevious<cr>
 
 " Easily [build and] execute code in the current buffer
-augroup bindigs
+augroup bindings
     autocmd!
-    autocmd FileType c nnoremap <buffer> <leader><cr>
-        \ :update <bar> terminal ++shell ++rows=5 gcc %:p -o %:p:r && %:p:r<cr>
-    autocmd FileType python nnoremap <buffer> <leader><cr>
-        \ :update <bar> terminal ++shell ++rows=5 python3 %:p<cr>
+    autocmd FileType c nnoremap <buffer> <localleader><cr>
+        \ :update <bar> terminal ++shell ++rows=10 gcc %:p -o %:p:r && %:p:r<cr>
+    autocmd FileType python nnoremap <buffer> <localleader><cr>
+        \ :update <bar> terminal ++shell ++rows=10 python3 %:p<cr>
 augroup end
 
 
