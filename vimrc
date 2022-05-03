@@ -139,6 +139,13 @@ augroup end
 " Plugins & Plugin Settings
 "
 
+" Install Vim-Plug if missing
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl --silent --fail --location --create-dirs --output ~/.vim/autoload/plug.vim
+        \ 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+endif
+
+" Installed plugins
 call plug#begin('~/.vim/plugged')
 
 Plug 'gruvbox-community/gruvbox'
