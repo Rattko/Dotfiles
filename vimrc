@@ -62,6 +62,9 @@ set showcmd
 " Do not display the mode at the bottom of the screen
 set noshowmode
 
+" Place a new window under the current one when splitting horizontally
+set splitbelow
+
 " Enable an enhanced command-line completion
 set wildmenu
 
