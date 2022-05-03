@@ -108,6 +108,12 @@ noremap <space> <nop>
 let mapleader = ' '
 let maplocalleader = ' '
 
+" Disable arrow keys altogether
+for arrow_key in ['<up>', '<down>', '<left>', '<right>']
+    execute 'noremap' arrow_key '<nop>'
+    execute 'inoremap' arrow_key '<nop>'
+endfor
+
 " Quickly edit or source `~/.vimrc`
 nnoremap <leader>ev :tabedit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
