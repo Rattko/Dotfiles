@@ -1,0 +1,29 @@
+[init]
+    # Set the default branch to 'main'
+    defaultBranch = main
+
+[core]
+    # Set the default text editor to 'Vim'
+    editor = vim
+
+[commit]
+    # Enable GPG signing
+    gpgSign = true
+
+[tag]
+    # Enable GPG signing
+    gpgSign = true
+
+[diff]
+    # Detect copies as well as renames
+    renames = copies
+
+[user]
+    # Set a username
+    name = Radovan Haluska
+
+    # Set an e-mail
+    email = radovan.haluska1@gmail.com
+
+    # Set a GPG key
+    signingKey = E6A1F30A207052E8
