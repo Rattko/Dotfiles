@@ -155,21 +155,25 @@ endif
 " Installed plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'gruvbox-community/gruvbox'
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'lervag/vimtex', {'for': 'tex'}
-Plug 'tabnine/YouCompleteMe', {'do': './install.py --clang-completer'}
+Plug 'lifepillar/vim-gruvbox8'
+Plug 'tabnine/YouCompleteMe', {'do': './install.py'}
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
-colorscheme gruvbox
+colorscheme gruvbox8
 set background=dark
 set termguicolors
 
 nnoremap <c-p> :FZF<cr>
 
 let g:tex_flavor = 'latex'
+
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
