@@ -48,6 +48,13 @@ set smartcase
 set list
 set listchars=tab:>·,trail:~,precedes:<,extends:>
 
+" Enable spell checking for specific file types
+augroup spelling
+    autocmd!
+    autocmd FileType markdown setlocal spell
+    autocmd FileType tex setlocal spell
+augroup end
+
 
 "
 " Behaviour
@@ -78,10 +85,10 @@ set hidden
 set undofile
 
 " Remember the last position in a buffer
-augroup behaviour
+augroup last_position
     autocmd!
     autocmd BufWinEnter *
-        \ if line("'\"") > 0 && line("'\"") <= line("$") | execute "normal! g`\"zz" | endif
+        \ if line("'\"") > 0 && line("'\"") <= line('$') | execute 'normal! g`"zz' | endif
 augroup end
 
 
