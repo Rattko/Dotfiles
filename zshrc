@@ -1,8 +1,8 @@
 #!/usr/bin/env zsh
 
 # Load other configuration files
-for file in ~/.zsh/.{aliases,exports,functions,settings}; do
-    [[ -e "$file" ]] && source "$file"
+for file in .aliases .exports .functions .settings; do
+    [[ -e "$HOME/.zsh/$file" ]] && source "$HOME/.zsh/$file"
 done
 
 # Enable Vim mode
