@@ -96,11 +96,26 @@ augroup end
 " Miscellaneous
 "
 
+" Check if `.vim` directory exists and create it if missing
+if ! isdirectory($HOME . '/.vim')
+    call mkdir($HOME . '/.vim', '', 0700)
+endif
+
 " Move `.viminfo` to `~/.vim` directory
 set viminfo+=n~/.vim/.viminfo
 
+" Check if `.vim/.undo` directory exists and create it if missing
+if ! isdirectory($HOME . '/.vim/.undo')
+    call mkdir($HOME . '/.vim/.undo', '', 0700)
+endif
+
 " Store undo files in `~/.vim` directory
 set undodir=~/.vim/.undo//
+
+" Check if `.vim/.swap` directory exists and create it if missing
+if ! isdirectory($HOME . '/.vim/.swap')
+    call mkdir($HOME . '/.vim/.swap', '', 0700)
+endif
 
 " Store swap files in `~/.vim` directory
 set directory=~/.vim/.swap//
