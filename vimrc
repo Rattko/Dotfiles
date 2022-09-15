@@ -167,6 +167,15 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         \ 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 endif
 
+" Install any missing plugins on a startup
+augroup plugins
+    autocmd!
+    autocmd VimEnter *
+        \ if len(filter(values(g:plugs), '! isdirectory(v:val.dir)'))
+            \| PlugInstall --sync | quit
+        \| endif
+augroup end
+
 " Installed plugins
 call plug#begin('~/.vim/plugged')
 
