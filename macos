@@ -1,12 +1,18 @@
 #!/usr/bin/env zsh
 
+# Automatically hide and show the menu bar
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+
+# Automatically hide and show the dock
+defaults write com.apple.dock autohide -bool true
+
+# Set a size of icons on the dock
+defaults write com.apple.dock tilesize -int 60
+defaults write com.apple.dock largesize -int 70
+
 # Set fast key repeats
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
-# Disable popup menu showing accented characters
-defaults write -g ApplePressAndHoldEnabled -bool false
-
-# Set a size of icons on the Dock
-defaults write com.apple.dock tilesize -int 60
-defaults write com.apple.dock largesize -int 70
+# Disable press-and-hold and allow key repeats
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
