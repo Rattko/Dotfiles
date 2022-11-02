@@ -60,8 +60,14 @@ augroup end
 " Behaviour
 "
 
-" Keep a minimum of 20 lines above or below a cursor
+" Keep a minimum of 20 lines above or below the cursor
 set scrolloff=20
+
+" Scroll one character at a time horizontally
+set sidescroll=1
+
+" Keep a minimum of 10 columns next to the cursor
+set sidescrolloff=10
 
 " Display partially typed commands at the bottom of the screen
 set showcmd
