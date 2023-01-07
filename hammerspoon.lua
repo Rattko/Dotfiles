@@ -1,27 +1,35 @@
--- Display a quick info containing time and a battery level
-hs.hotkey.bind({'cmd', 'alt'}, ';', function()
-    local battery = math.floor(hs.battery.percentage()) .. '%'
+hyper = {'cmd', 'alt', 'ctrl'}
+hyperShift = {'cmd', 'alt', 'ctrl', 'shift'}
+configFileLoc = os.getenv('HOME') .. '/Coding/Personal/Dotfiles/hammerspoon.lua'
 
-    hs.alert.show(os.date('%I:%M%p') .. ' | ' .. battery)
-end)
+-- Automatically relaunch Hammerspoon when this file is updated
+reloader = hs.pathwatcher.new(configFileLoc, hs.relaunch):start()
 
--- Center an active window
-hs.hotkey.bind({'cmd', 'alt'}, 'c', function()
-    hs.window.focusedWindow():centerOnScreen()
-end)
+-- Relaunch Hammerspoon on demand
+hs.hotkey.bind(hyper, '§', hs.relaunch)
 
--- Maximize an active window
-hs.hotkey.bind({'cmd', 'alt'}, 'f', function()
-    hs.window.focusedWindow():maximize()
-end)
 
--- Bring up Kitty
-hs.hotkey.bind({'ctrl'}, ';', function()
-    local app = hs.application.get('kitty')
+function launchApp(appName)
+    local app = hs.application.get(appName)
 
     if app and app:isFrontmost() then
         app:hide()
     else
-        hs.application.launchOrFocus('kitty')
+        hs.application.launchOrFocus(appName)
     end
+end
+
+-- Bring up Kitty
+hs.hotkey.bind({'ctrl'}, ';', function()
+    launchApp('kitty')
+end)
+
+-- Bring up Dash
+hs.hotkey.bind({'ctrl'}, '\'', function()
+    launchApp('Dash')
+end)
+
+-- Bring up Safari
+hs.hotkey.bind({'ctrl'}, '\\', function()
+    launchApp('Safari')
 end)
