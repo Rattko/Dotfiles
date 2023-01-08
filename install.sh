@@ -6,7 +6,7 @@ get_absolute_path() {
 }
 
 # Create needed directories
-mkdir -p ~/.zsh ~/.config/{bat,git,kitty}
+mkdir -p ~/.zsh ~/.hammerspoon ~/.config/{bat,git,kitty}
 
 # Kitty
 ln -s -f $(get_absolute_path kitty.conf) ~/.config/kitty/kitty.conf
@@ -30,3 +30,6 @@ ln -s -f $(get_absolute_path gitignore) ~/.config/git/ignore
 
 # Bat
 ln -s -f $(get_absolute_path bat.conf) ~/.config/bat/config
+
+# Hammerspoon
+ln -s -f $(get_absolute_path hammerspoon.lua) ~/.hammerspoon/init.lua
