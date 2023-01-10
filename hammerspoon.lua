@@ -22,6 +22,19 @@ hs.grid.setGrid(
 )
 hs.grid.setMargins(hs.geometry.size(0, 0))
 
+-- Customise the appearance of the grid
+hs.grid.ui.textColor = {1, 1, 1, 1}
+hs.grid.ui.textSize = 150
+hs.grid.ui.cellColor = {0, 0, 0, 0.25}
+hs.grid.ui.cellStrokeColor = {0, 0, 0, 1}
+hs.grid.ui.cellStrokeWidth = 5
+hs.grid.ui.highlightColor = {28 / 255, 54 / 255, 75 / 255, 0.5}
+hs.grid.ui.highlightStrokeColor = {28 / 255, 54 / 255, 75 / 255, 1}
+hs.grid.ui.highlightStrokeWidth = 10
+hs.grid.ui.selectedColor = {163 / 255, 70 / 255, 54 / 255, 0.8}
+hs.grid.ui.showExtraKeys = false
+hs.grid.ui.fontName = 'Fira Code'
+
 -- Disable animations
 hs.window.animationDuration = 0
 
