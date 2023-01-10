@@ -41,6 +41,55 @@ hs.window.animationDuration = 0
 -- Toggle the grid on and off
 hs.hotkey.bind(hyper, '`', hs.grid.toggleShow)
 
+function moveFocusedWindow(position)
+    hs.grid.set(hs.window.focusedWindow(), position)
+end
+
+-- Move the active window to the top left portion of the screen
+hs.hotkey.bind(hyper, 'q', function()
+    moveFocusedWindow({0, 0, gridWidth / 2, gridHeight / 2})
+end)
+
+-- Move the active window to the top half of the screen
+hs.hotkey.bind(hyper, 'w', function()
+    moveFocusedWindow({0, 0, gridWidth, gridHeight / 2})
+end)
+
+-- Move the active window to the top right portion of the screen
+hs.hotkey.bind(hyper, 'e', function()
+    moveFocusedWindow({gridWidth / 2, 0, gridWidth / 2, gridHeight / 2})
+end)
+
+-- Move the active window to the left half of the screen
+hs.hotkey.bind(hyper, 'a', function()
+    moveFocusedWindow({0, 0, gridWidth / 2, gridHeight})
+end)
+
+-- Move the active window to the centre of the screen
+hs.hotkey.bind(hyper, 's', function()
+    moveFocusedWindow({gridWidth / 4, gridHeight / 4, gridWidth / 2, gridHeight / 2})
+end)
+
+-- Move the active window to the right half of the screen
+hs.hotkey.bind(hyper, 'd', function()
+    moveFocusedWindow({gridWidth / 2, 0, gridWidth / 2, gridHeight})
+end)
+
+-- Move the active window to the bottom left portion of the screen
+hs.hotkey.bind(hyper, 'z', function()
+    moveFocusedWindow({0, gridHeight / 2, gridWidth / 2, gridHeight / 2})
+end)
+
+-- Move the active window to the bottom half of the screen
+hs.hotkey.bind(hyper, 'x', function()
+    moveFocusedWindow({0, gridHeight / 2, gridWidth, gridHeight / 2})
+end)
+
+-- Move the active window to the bottom right portion of the screen
+hs.hotkey.bind(hyper, 'c', function()
+    moveFocusedWindow({gridWidth / 2, gridHeight / 2, gridWidth / 2, gridHeight / 2})
+end)
+
 
 function launchApp(appName)
     local app = hs.application.get(appName)
