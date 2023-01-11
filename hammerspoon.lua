@@ -90,6 +90,16 @@ hs.hotkey.bind(hyper, 'c', function()
     moveFocusedWindow({gridWidth / 2, gridHeight / 2, gridWidth / 2, gridHeight / 2})
 end)
 
+-- Maximize the active window
+hs.hotkey.bind(hyper, 'f', function()
+    moveFocusedWindow({0, 0, gridWidth, gridHeight})
+end)
+
+-- Center the active window without changing its size
+hs.hotkey.bind(hyper, 'g', function()
+    hs.window.focusedWindow():centerOnScreen()
+end)
+
 
 function launchApp(appName)
     local app = hs.application.get(appName)
