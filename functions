@@ -15,3 +15,13 @@ function venv {
 
     source "$venv_path"/bin/activate
 }
+
+# Generate a random password of a given length
+function rand_passwd {
+    local passwd_len="${1:-15}"
+
+    echo -n $(openssl rand -base64 $passwd_len)
+
+    # Add a new line when outputting to a terminal
+    [ -t 1 ] && echo ''
+}
