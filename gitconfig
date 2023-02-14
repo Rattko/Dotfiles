@@ -3,8 +3,8 @@
     defaultBranch = main
 
 [core]
-    # Set the default text editor to 'Vim'
-    editor = vim
+    # Set the default text editor to 'Neovim'
+    editor = nvim
 
 [commit]
     # Enable GPG signing
@@ -27,3 +27,8 @@
 
     # Set a GPG key
     signingKey = E6A1F30A207052E8
+
+[alias]
+    # Shorten frequently used commands
+    st = status
+    ci = commit
