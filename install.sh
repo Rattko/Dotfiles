@@ -10,6 +10,7 @@ mkdir -p ~/.zsh ~/.hammerspoon ~/.config/{bat,git,kitty,nvim}
 
 # Kitty
 ln -s -f $(get_absolute_path kitty.conf) ~/.config/kitty/kitty.conf
+ln -s -f $(get_absolute_path kitty.theme) ~/.config/kitty/theme.conf
 
 # Zsh
 ln -s -f $(get_absolute_path zshenv) ~/.zshenv
