@@ -6,7 +6,7 @@ get_absolute_path() {
 }
 
 # Create needed directories
-mkdir -p ~/.zsh ~/.hammerspoon ~/.config/{bat,git,kitty}
+mkdir -p ~/.zsh ~/.hammerspoon ~/.config/{bat,git,kitty,nvim}
 
 # Kitty
 ln -s -f $(get_absolute_path kitty.conf) ~/.config/kitty/kitty.conf
@@ -21,8 +21,8 @@ done
 # Starship
 ln -s -f $(get_absolute_path starship.toml) ~/.config/starship.toml
 
-# Vim
-ln -s -f $(get_absolute_path vimrc) ~/.vimrc
+# Neovim
+ln -s -f $(get_absolute_path init.vim) ~/.config/nvim/init.vim
 
 # Git
 ln -s -f $(get_absolute_path gitconfig) ~/.config/git/config
