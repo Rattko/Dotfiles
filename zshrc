@@ -52,6 +52,9 @@ zstyle ':completion:*' matcher-list \
 
 autoload -Uz compinit && compinit
 
+# Only autocomplete directories with the 'ls' command
+compdef _dirs ls
+
 # Enable fish-like autosuggestions
 source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 

@@ -23,6 +23,3 @@ setopt HIST_IGNORE_SPACE
 
 # Verify a command when '!!' is executed
 setopt HIST_VERIFY
-
-# Only autocomplete directories with the 'ls' command
-compdef _dirs ls
