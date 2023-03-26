@@ -27,7 +27,7 @@ alias lad="command ls -lhdG .*/ */"
 alias dotfiles="cd ~/Coding/Personal/Dotfiles"
 
 # Update all CLI and GUI applications
-alias update="brew update; brew upgrade; brew cleanup; pip3 install --upgrade pip"
+alias update="brew update; brew upgrade; brew cleanup -s"
 
 # Show/Hide all desktop icons
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
