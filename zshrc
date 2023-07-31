@@ -35,9 +35,6 @@ _fzf_compgen_dir() {
     fd --exclude Library --type d . "$1"
 }
 
-# Enable The Fuck
-eval $(thefuck --alias)
-
 # Use already typed text as a start-point for searching
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
