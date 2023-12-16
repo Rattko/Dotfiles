@@ -26,6 +26,9 @@ alias lad="command ls -lhdG .*/ */"
 # Move to the directory containing dotfiles
 alias dotfiles="cd ~/Coding/Personal/Dotfiles"
 
+# Move to the directory containing the source code for my master thesis
+alias thesis="cd ~/Coding/School/MasterThesis"
+
 # Update all CLI and GUI applications
 alias update="brew update; brew upgrade; brew cleanup -s"
 
