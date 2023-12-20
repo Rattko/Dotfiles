@@ -44,6 +44,9 @@ set sidescrolloff=10
 set splitbelow
 set splitright
 
+" Do not display the command line at the bottom
+set cmdheight=0
+
 " Do not display the mode at the bottom of the screen
 set noshowmode
 
@@ -67,6 +70,10 @@ endfor
 
 " More convenient escape alternative
 inoremap jk <esc>
+
+" Always center the cursor when jumping with `c-u` and `c-d`
+nnoremap <c-u> <c-u>zz
+nnoremap <c-d> <c-d>zz
 
 " Switch between windows more easily
 nnoremap <c-h> <c-w>h
