@@ -80,3 +80,7 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
+
+" Switch between buffers more easily
+nnoremap <leader><tab> :bnext<cr>
+nnoremap <leader><s-tab> :bprev<cr>
