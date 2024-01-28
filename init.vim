@@ -101,7 +101,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup(
     {
-
+        'tpope/vim-commentary',
+        'tpope/vim-surround',
+        'tpope/vim-repeat'
     },
     {
         defaults = {
