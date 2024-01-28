@@ -84,3 +84,43 @@ nnoremap <c-l> <c-w>l
 " Switch between buffers more easily
 nnoremap <leader><tab> :bnext<cr>
 nnoremap <leader><s-tab> :bprev<cr>
+
+
+lua << block
+
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
+
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        'git', 'clone', '--branch=stable', '--filter=blob:none',
+        'https://github.com/folke/lazy.nvim.git', lazypath
+    })
+end
+
+vim.opt.rtp:prepend(lazypath)
+
+require('lazy').setup(
+    {
+
+    },
+    {
+        defaults = {
+            -- Do not lazy-load plugins by default
+            lazy = false,
+            -- Install the latest stable versions of plugins
+            version = '*'
+        },
+        ui = {
+            -- Do not wrap the lines that do not fit the screen
+            wrap = false
+        },
+        checker = {
+            -- Automatically check for plugin updates
+            enabled = true,
+            -- Do not send a notification when there are updates
+            notify = false
+        }
+    }
+)
+
+block
