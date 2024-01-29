@@ -109,6 +109,29 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup(
     {
+        {
+            'exafunction/codeium.vim',
+            config = function()
+                vim.keymap.set(
+                    'i', '<leader>cn',
+                    function() return vim.fn['codeium#CycleCompletions'](1) end,
+                    { expr = true, silent = true }
+                )
+
+                vim.keymap.set(
+                    'i', '<leader>cp',
+                    function() return vim.fn['codeium#CycleCompletions'](-1) end,
+                    { expr = true, silent = true }
+                )
+
+                vim.keymap.set(
+                    'i', '<leader>cc',
+                    function() return vim.fn['codeium#Clear']() end,
+                    { expr = true, silent = true }
+                )
+            end
+        },
+
         'tpope/vim-commentary',
         'tpope/vim-surround',
         'tpope/vim-repeat'
