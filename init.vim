@@ -86,6 +86,14 @@ nnoremap <leader><tab> :bnext<cr>
 nnoremap <leader><s-tab> :bprev<cr>
 
 
+" Remember the last position in a buffer
+augroup last_position
+    autocmd!
+    autocmd BufWinEnter *
+        \ if line("'\"") > 0 && line("'\"") <= line('$') | execute 'normal! g`"zz' | endif
+augroup end
+
+
 lua << block
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
