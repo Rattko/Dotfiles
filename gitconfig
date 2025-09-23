@@ -30,9 +30,14 @@
     email = radovan.haluska1@gmail.com
 
     # Set a GPG key
-    signingKey = E6A1F30A207052E8
+    signingKey = 18ADF0282D22B4E9
 
 [alias]
     # Shorten frequently used commands
     st = status
     ci = commit
+    stlt = stash list
+    stsw = stash show
+    stph = stash push
+    stpp = stash pop
+    stdp = stash drop
