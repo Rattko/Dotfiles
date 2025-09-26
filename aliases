@@ -4,6 +4,7 @@
 alias v="nvim"
 alias p="python3"
 alias j="julia"
+alias ssh="kitten ssh"
 
 # Always use a colored output for 'ls' command
 alias ls="command ls -1FG"
@@ -28,6 +29,12 @@ alias dotfiles="cd ~/Coding/Personal/Dotfiles"
 
 # Move to the directory containing the source code for my master thesis
 alias thesis="cd ~/Coding/School/MasterThesis"
+
+# Move to the directory containing the source code for Neural Bayesian Filtering
+alias nbf="cd ~/Research/Donuts"
+
+# Move to the directory containing the source code for Belief Embedding Tree Search
+alias bets="cd ~/Research/Bets"
 
 # Update all CLI and GUI applications
 alias update="brew update; brew upgrade; brew cleanup -s"
