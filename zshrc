@@ -49,6 +49,15 @@ zstyle ':completion:*' matcher-list \
 
 autoload -Uz compinit && compinit
 
+# Activate Python's virtual environment if .venv is present
+activate_venv() { [[ -d .venv ]] && source .venv/bin/activate }
+
+# ... when starting a new shell and
+activate_venv
+
+# ... after every `cd` command
+autoload -Uz add-zsh-hook && add-zsh-hook chpwd activate_venv
+
 # Only autocomplete directories with the 'ls' command
 compdef _dirs ls
 
